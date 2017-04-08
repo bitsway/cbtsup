@@ -192,6 +192,7 @@ function secondPage(){
 function thirdPage(){
 	//দক্ষতা ১
 	var A3S1_Q1=$("#A3S1_Q1").val();
+	//var A3S1_Q1=$("input[name='A3S1_Q1']:checked").val();
 	//দক্ষতা ২
 	var A3S2_Q1=$("#A3S2_Q1").val();
 	var A3S2_Q2=$("#A3S2_Q2").val();
@@ -481,7 +482,7 @@ function imageUpload(){
 		var d = new Date();	
 		var get_time=d.getTime();
 							
-		imageNameA = localStorage.mobile_no+"_"+get_time+".jpg";					
+		imageNameA = localStorage.mobile_no+"_"+get_time+".jpg";			
 		uploadPhotoAch(imagePathA, imageNameA);
 	}			
 			
@@ -537,7 +538,7 @@ function uploadPhotoAch(imageURI, imageNameA) {
 }
 
 function winAch(r) {	
-	$(".errorChk").text('Image 1 upload Successful. Syncing image 2...');
+	//$(".errorChk").text('Image 1 upload Successful. Syncing image 2...');
 }
 
 function onfail(r) {
@@ -566,7 +567,7 @@ function onFailB(message) {
 }
 
 
-function uploadPhoto2Ach(imageURI, imagePathB) { // second step
+function uploadPhoto2Ach(imageURI, imageNameB) { // second step
 	
 	var options = new FileUploadOptions();
     options.fileKey="upload";
@@ -586,7 +587,7 @@ function uploadPhoto2Ach(imageURI, imagePathB) { // second step
 }
 
 function winAch2(r) {
-	$(".errorChk").text('Image 2 upload successfull. Syncing Data ...');	
+	$(".errorChk").text('Image upload successfull. Syncing Data ...');	
 }
 
 function onfail2(r) {
